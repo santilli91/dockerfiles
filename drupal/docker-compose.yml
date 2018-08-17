@@ -15,7 +15,7 @@ services:
       - mysql
     volumes: 
       #- ${DOCUMENT_ROOT-./}:/var/www/html/sites
-      - ./:/var/www/html/sites
+      - ./sites:/var/www/html/sites
   mysql:
     image: mysql:5.7
     container_name: 'mysql'
