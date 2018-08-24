@@ -1,0 +1,24 @@
+version: '2'
+services:
+
+ hostmaster:
+   container_name: 'aegir'
+   image: aegir/hostmaster
+   ports:
+     - 80:80
+   hostname: aegir.l.hmp1.io
+   links:
+     - database
+   volumes:
+     - ./platforms:/var/aegir/platforms
+   depends_on:
+     - database
+   environment:
+     MYSQL_ROOT_PASSWORD: tiger
+
+ database:
+   image: mariadb
+   ports:
+     - 3306:3306
+   environment:
+     MYSQL_ROOT_PASSWORD: tiger
