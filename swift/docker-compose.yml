@@ -1,21 +1,6 @@
 version: '2'
 services:
 
- hostmaster:
-   container_name: 'swift'
-   image: swift
-   ports:
-     - 80:80
-   links:
-     - database
-   depends_on:
-     - database
-   environment:
-     MYSQL_ROOT_PASSWORD: tiger
- database:
-   container_name: 'swift_db'
-   image: mariadb
-   ports:
-     - 3306:3306
-   environment:
-     MYSQL_ROOT_PASSWORD: tiger
+ swift:
+   container_name: 'stest'
+   image: swift:latest
