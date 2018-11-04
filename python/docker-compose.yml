@@ -1,0 +1,23 @@
+version: '2'
+services:
+
+ hostmaster:
+   container_name: 'python'
+   image: python:alpine3.7
+   ports:
+     - 80:80
+   links:
+     - database
+   volumes:
+     - ./app:/usr/src/app
+   depends_on:
+     - database
+   environment:
+     MYSQL_ROOT_PASSWORD: tiger
+
+ database:
+   image: mariadb
+   ports:
+     - 3306:3306
+   environment:
+     MYSQL_ROOT_PASSWORD: tiger

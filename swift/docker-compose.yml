@@ -1,6 +1,0 @@
-version: '2'
-services:
-
- swift:
-   container_name: 'stest'
-   image: swift:latest
