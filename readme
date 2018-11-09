@@ -1,0 +1,7 @@
+Name: dockerfiles
+Author: Michael Santilli
+User: santilli91
+Description:
+______________
+Contains docker implementations for many different projects
+Mostly docker-compose files but does contain some intruction for Dockerfiles
